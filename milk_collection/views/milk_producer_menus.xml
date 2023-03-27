@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="milk_collection_menu" name="collection" >
+        <menuitem id="milk_producer_first_level" name="producers" >
+            <menuitem id="milk_producer_menu_action" action="milk_producer_model_action" name="producteurs"/>
+            <menuitem id="milk_production" action="milk_production_model_action" name="unite de production"/>
+        </menuitem>
+        <menuitem id="milk_collection_first_level" name="collecte" >
+            <menuitem id="milk_collection" action="collection_model_action" name="collection"/>
+            <menuitem id="milk_reception" action="reception_model_action" name="reception"/>
+            <menuitem id="milk_camion" action="camion_model_action" name="camions"/>
+            <menuitem id="milk_tournee" action="tournee_model_action" name="tournee"/>
+            <menuitem id="milk_center" action="center_model_action" name="centre de collect"/>
+            <menuitem id="milk_bac" action="bac_model_action" name="bac a lait interne"/>
+        </menuitem>
+        <menuitem id="milk_Rh_first_level" name="R.H" >
+            <menuitem id="milk_chauf" action="chauffeur_model_action" name="chauffeurs"/>
+            <menuitem id="milk_agent" action="agent_model_action" name="agents de collection"/>
+        </menuitem>
+    </menuitem>
+
+</odoo>

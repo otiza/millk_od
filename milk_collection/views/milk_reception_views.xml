@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="reception_model_action"  model="ir.actions.act_window">
+        <field name="name">receptions</field>
+        <field name="res_model">milk.reception</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="milk_reception_view_tree" model="ir.ui.view">
+        <field name="name">milk.reception.tree</field>
+        <field name="model">milk.reception</field>
+        <field name="arch" type="xml">
+            <tree  string="reception">
+                <field name="tournee_id" ></field>
+                <field name="date_reception" ></field>
+                <field name="quantite"></field>
+            </tree>
+        </field>
+    </record> 
+    <record id="milk_reception_model_form" model="ir.ui.view">
+        <field name="name">reception.form</field>
+        <field name="model">milk.reception</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group >
+                        <group>
+                            <field name="quantite"></field>
+                            <field name="date_reception"></field>
+                            <field name="destination"></field>
+                        </group>
+                        <group>
+                            <field name="pesage"></field>
+                            <field name="tournee_id"></field>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="collections">
+                            <field name="collection_ids"></field>
+                        </page>
+                        
+                        <page string="analyse">
+                            <group >
+                                <field name="Mg"></field>
+                                <field name="Alc"></field>
+                                <field name="Rdl"></field>
+                            </group>
+                            
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

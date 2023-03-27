@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="milk_vache_view_tree" model="ir.ui.view">
+        <field name="name">milk.vache.tree</field>
+        <field name="model">milk.cow</field>
+        <field name="arch" type="xml">
+        <tree  string="vaches">
+            <field name="code"></field>
+            
+        </tree>
+    </field>
+    </record>
+
+</odoo>

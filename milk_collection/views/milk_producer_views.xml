@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+        <record id="milk_producer_model_action" model="ir.actions.act_window">
+            <field name="name">producteurs</field>
+            <field name="res_model">milk.producer</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+    <record id="milk_producer_tree" model="ir.ui.view">
+        <field name="name">producet.tree</field>
+        <field name="model">milk.producer</field>
+        <field name="arch" type="xml">
+             <tree string="producers">
+                 <field name="name" string="name"/>
+                 <field name="email"/>
+                 <field name="phone"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="producer_model_form" model="ir.ui.view">
+        <field name="name">producer.form</field>
+        <field name="model">milk.producer</field>
+        <field name="arch" type="xml">
+            <form>
+               <sheet>                   
+                    <h1>
+                        <field name="partner_id" string="name"></field>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="phone" string="telephone"></field>
+                            <field name="email" string="email"></field>
+                                
+                        </group>
+                        <group>
+                            <field name="is_company"></field>
+                        </group>
+                    </group>
+                    <notebook>                  
+                        <page string="address">
+                            <group>
+                                <group>
+                                    <field name="street" string="rue"></field>
+                                    <field name="street2" string="rue2"></field>
+                                    <field name="zip" string="code postal"></field>
+                                    <field name="city" string="ville"></field>
+                                    
+                                </group>
+                                <group>
+                                    <field name="longitude" string="longitude"></field>
+                                    <field name="latitude" string="latitude"></field>  
+                                </group> 
+                            </group>
+                        </page>
+                        <page string="cheptel">
+                            <field name="cheptel_ids" string="cheptel"/>
+                        </page>
+                        <page string="unites de production">
+                            <field name="unite_ids"/>
+                        </page>
+                    </notebook>
+               </sheet>
+            </form>
+        </field>
+    </record>
+       
+</odoo>

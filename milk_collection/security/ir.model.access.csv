@@ -1,0 +1,14 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_milk_producer","access_milk_producer","model_milk_producer","base.group_user",1,1,1,1 
+"access_milk_cow","access_milk_cow","model_milk_cow","base.group_user",1,1,1,1
+"access_milk_tournee","access_milk_tournee","model_milk_tournee","base.group_user",1,1,1,1 
+"access_milk_reception","access_milk_reception","model_milk_reception","base.group_user",1,1,1,1 
+"access_milk_collection","access_milk_collection","model_milk_collection","base.group_user",1,1,1,1
+"access_milk_chauffeur","access_milk_chauffeur","model_milk_chauffeur","base.group_user",1,1,1,1
+"access_milk_agent","access_milk_agent","model_milk_agent","base.group_user",1,1,1,1 
+"access_milk_camion","access_milk_camion","model_milk_camion","base.group_user",1,1,1,1
+"access_milk_unite","access_milk_unite","model_milk_unite","base.group_user",1,1,1,1
+"access_bac_lait","access_bac_lait","model_bac_lait","base.group_user",1,1,1,1
+"access_collection_line","access_collection_line","model_collection_line","base.group_user",1,1,1,1
+"access_collect_center","access_collect_center","model_collect_center","base.group_user",1,1,1,1
+"access_bac_interne","access_bac_interne","model_bac_interne","base.group_user",1,1,1,1 

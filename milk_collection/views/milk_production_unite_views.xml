@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="milk_production_model_action" model="ir.actions.act_window">
+        <field name="name">production</field>
+        <field name="res_model">milk.unite</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="milk_unite_tree" model="ir.ui.view">
+        <field name="name">unite.tree</field>
+        <field name="model">milk.unite</field>
+        <field name="arch" type="xml">
+             <tree string="unites">
+                 <field name="name" string="name"/>
+                 <field name="latitude"/>
+                 <field name="longitude"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="unite_model_form" model="ir.ui.view">
+        <field name="name">unite.form</field>
+        <field name="model">milk.unite</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>
+                        <field name="name"></field>
+                    </h1>
+                    <group>
+                        <group >
+                            <field name="producer_id" string="producer"></field>
+                        </group>
+                        <group>
+                            <field name="latitude"></field>
+                            <field name="longitude"></field>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="bac a lait" >
+                            <field name="bacalait_ids"></field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="milk_bac_tree" model="ir.ui.view">
+        <field name="name">bac.tree</field>
+        <field name="model">bac.lait</field>
+        <field name="arch" type="xml">
+             <tree string="unites">
+                 <field name="reference" string="name"/>
+                 <field name="capacite"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <record id="bac_model_form" model="ir.ui.view">
+        <field name="name">bac.form</field>
+        <field name="model">bac.lait</field>
+        <field name="arch" type="xml">
+            <form>
+                <group >
+                    <field name="reference"></field>
+                    <field name="capacite"></field>
+                </group>
+                
+            </form>
+        </field>
+    </record>
+    
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="camion_model_action"  model="ir.actions.act_window">
+        <field name="name">camions</field>
+        <field name="res_model">milk.camion</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="milk_camion_tree" model="ir.ui.view">
+        <field name="name">camion.tree</field>
+        <field name="model">milk.camion</field>
+        <field name="arch" type="xml">
+             <tree string="camions">
+                 <field name="license" string="
+                 immatriculation"/>
+                <field name="capacite"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

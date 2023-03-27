@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="agent_model_action"  model="ir.actions.act_window">
+        <field name="name">agents de collecte</field>
+        <field name="res_model">milk.agent</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="milk_agent_tree" model="ir.ui.view">
+        <field name="name">chauf.tree</field>
+        <field name="model">milk.agent</field>
+        <field name="arch" type="xml">
+             <tree string="agents">
+                 <field name="name" string="name"/>
+                 <field name="email"/>
+                 <field name="phone"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

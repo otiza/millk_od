@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="chauffeur_model_action"  model="ir.actions.act_window">
+        <field name="name">chauffeurs</field>
+        <field name="res_model">milk.chauffeur</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="milk_chauffeur_tree" model="ir.ui.view">
+        <field name="name">chauf.tree</field>
+        <field name="model">milk.chauffeur</field>
+        <field name="arch" type="xml">
+             <tree string="producers">
+                 <field name="name" string="name"/>
+                 <field name="email"/>
+                 <field name="phone"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
