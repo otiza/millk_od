@@ -13,6 +13,7 @@
         <field name="arch" type="xml">
              <tree string="unites">
                  <field name="name" string="name"/>
+                 <field name="producer_id"/>
                  <field name="latitude"/>
                  <field name="longitude"/>
             </tree>
@@ -72,5 +73,5 @@
             </form>
         </field>
     </record>
-    
+
 </odoo>

@@ -18,7 +18,7 @@ class MilkCollection(models.Model):
     centre_id = fields.Many2one("collect.center",'Destination Location')
     location_dest_id = fields.Many2one(
         'stock.location', related='centre_id.stock_id')
-    date_collection = fields.Date(string="date de  collection", default=datetime.now(),readonly=True)
+    date_collection = fields.Datetime(string="date de  collection", default=datetime.now(),readonly=True)
     is_received = fields.Boolean(default= False)
     collect_line_ids = fields.One2many('collection.line','milk_collection_id')
     @api.depends("collect_line_ids")

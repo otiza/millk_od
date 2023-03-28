@@ -7,7 +7,7 @@ class MilkReception(models.Model):
 
     quantite = fields.Float()
     pesage = fields.Float()
-    date_reception = fields.Date(string="date de  reception", default=datetime.today())
+    date_reception = fields.Datetime(string="date de  reception", default=datetime.now())
     tournee_id = fields.Many2one("milk.tournee",required=True)
     destination = fields.Many2one("bac.interne")
     collection_ids = fields.Many2many('milk.collection',domain="[('is_received', '=',False)]")   
